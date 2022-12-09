@@ -6,6 +6,7 @@
 ```
 配置util下OSSClientUtil 阿里云上传工具类
 /**阿里云API的内或外网域名*/
+/**如oss-cn-guangzhou.aliyuncs.com*/
 public static String ENDPOINT = "";
 /**OSS签名key*/
 public static String ACCESS_KEY_ID = "";
