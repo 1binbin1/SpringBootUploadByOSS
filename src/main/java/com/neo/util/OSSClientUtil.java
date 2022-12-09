@@ -25,17 +25,17 @@ public class OSSClientUtil {
     private static Logger log = LoggerFactory.getLogger(OSSClientUtil.class);
 
     /**
-     * 阿里云API的内或外网域名
+     * 阿里云API的内或外网域名 如oss-cn-guangzhou.aliyuncs.com
      */
-    public static String ENDPOINT = "oss-cn-guangzhou.aliyuncs.com";
+    public static String ENDPOINT = "";
     /**
      * OSS签名key
      */
-    public static String ACCESS_KEY_ID = "LTAI5t88KFZki6JU3x3ptwv7";
+    public static String ACCESS_KEY_ID = "";
     /**
      * OSS签名密钥
      */
-    public static String ACCESS_KEY_SECRET = "9wdqsQekhMvS2R5YAuHyNkdrJ9BOAv";
+    public static String ACCESS_KEY_SECRET = "";
     /**
      * 存储空间名称
      */

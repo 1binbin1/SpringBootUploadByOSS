@@ -18,10 +18,11 @@ public class QiniuUploadUtil {
 
 	private static Logger logger = LoggerFactory.getLogger(QiniuUploadUtil.class);
 
-	private static String accessKey = "LTAI5t88KFZki6JU3x3ptwv7";
-	private static String secretKey = "9wdqsQekhMvS2R5YAuHyNkdrJ9BOAv";
+	private static String accessKey = "";
+	private static String secretKey = "";
 	private static String bucket = "douyin-1";
-	private static String startStaff = "oss-cn-guangzhou.aliyuncs.com";
+//	如 oss-cn-guangzhou.aliyuncs.com
+	private static String startStaff = "";
 
 	public static String getStartStaff() {
 		return startStaff;
