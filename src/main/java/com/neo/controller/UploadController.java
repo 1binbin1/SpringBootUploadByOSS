@@ -31,7 +31,6 @@ public class UploadController {
     //private static String UPLOAD_FOLDER = "E://temp//";
 
 
-
     @GetMapping("/")
     public String index() {
         return "upload";
@@ -46,9 +45,10 @@ public class UploadController {
         }
 
         try {
-            String fileName= OSSClientUtil.createFileName("dispute");
-            String Sys=OSSClientUtil.uploadImage(file.getInputStream(),fileName);
-            if(Sys!=null){
+            String fileName = OSSClientUtil.createFileName("dispute");
+//            上传文件
+            String Sys = OSSClientUtil.uploadImage(file.getInputStream(), fileName);
+            if (Sys != null) {
                 byte[] bytes = file.getBytes();
                 Path path = Paths.get(UPLOAD_FOLDER + file.getOriginalFilename());
                 //如果没有files文件夹，则创建
@@ -59,7 +59,7 @@ public class UploadController {
                 Files.write(path, bytes);
 
                 redirectAttributes.addFlashAttribute("message",
-                        "You successfully uploaded '【"+OSSClientUtil.getStartStaff()+"/" + fileName + "】'");
+                        "You successfully uploaded '【" + OSSClientUtil.getStartStaff() + "/" + fileName + "】'");
             }
 
         } catch (IOException e) {

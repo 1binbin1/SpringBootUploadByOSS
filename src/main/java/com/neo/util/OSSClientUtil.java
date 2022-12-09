@@ -21,34 +21,34 @@ public class OSSClientUtil {
     private static Logger log = LoggerFactory.getLogger(OSSClientUtil.class);
 
     /**阿里云API的内或外网域名*/
-    public static String ENDPOINT = "";
+    public static String ENDPOINT = "oss-cn-guangzhou.aliyuncs.com";
     /**OSS签名key*/
-    public static String ACCESS_KEY_ID = "";
+    public static String ACCESS_KEY_ID = "LTAI5t88KFZki6JU3x3ptwv7";
     /**OSS签名密钥*/
-    public static String ACCESS_KEY_SECRET = "";
+    public static String ACCESS_KEY_SECRET = "9wdqsQekhMvS2R5YAuHyNkdrJ9BOAv";
     /**存储空间名称*/
-    public static String BUCKETNAME = "";
+    public static String BUCKETNAME = "douyin-1";
 
 
     public static String getStartStaff() {
         return "http://"+BUCKETNAME+"."+ENDPOINT;
     }
 
-//    /**
-//     * 获取ossClient
-//     * @return
-//     */
-//    public static OSSClient ossClientInitialization(){
-//        return new OSSClient(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
-//    }
+    /**
+     * 获取ossClient
+     * @return
+     */
+    public static OSSClient ossClientInitialization(){
+        return new OSSClient(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
+    }
 
-//    /**
-//     * 判断是否存在bucketName
-//     * @return
-//     */
-//    private static boolean hasBucket(OSSClient ossClient){
-//        return ossClient.doesBucketExist(BUCKETNAME);
-//    }
+    /**
+     * 判断是否存在bucketName
+     * @return
+     */
+    private static boolean hasBucket(OSSClient ossClient){
+        return ossClient.doesBucketExist(BUCKETNAME);
+    }
 
     public static String createFileName(String mime) { // 需要创建一个文件名称
         String fileName = UUID.randomUUID() + "_" + mime + ".jpg";
